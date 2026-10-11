@@ -1,64 +1,49 @@
-# 📚 AI Library
+# 📚 AI Generation Library
 
-### AI가 쓰고, 모두가 함께 채워가는 오픈소스 도서관
+**AI로 쓴 책을, 함께 읽고 고치는 오픈소스 서재.**
 
-**AI Library** is an open-source digital library of AI-generated books.
+AI Generation Library is an open-source library of AI-generated books, improved through community contributions.
 
-AI Library는 인공지능이 집필한 책을 누구나 자유롭게 읽고 공유할 수 있는 오픈소스 프로젝트입니다.
+관심 있는 주제를 AI로 한 권의 책으로 만들고, 원고와 관련 자료를 공개합니다. 누구나 책을 읽고, 오류를 고치고, 새로운 책을 제안할 수 있습니다. 책 콘텐츠와 독자용 웹 서비스를 별도 저장소로 관리합니다.
 
-AI가 만들어낸 다양한 지식과 이야기를 책으로 보관하고, 누구나 새로운 책을 발견할 수 있는 열린 도서관을 만들어갑니다.
+**[온라인 서재에서 읽기 →](https://ai-generation-library.github.io/library/)** · [책 원고](https://github.com/AI-Generation-Library/books) · [웹 서비스](https://github.com/AI-Generation-Library/library)
 
-이곳에서는 누구나 독자가 될 수 있고, 새로운 책을 제안하거나 도서관 개발에 참여할 수도 있습니다.
+## 첫 번째 책
 
----
+### [FastAPI 완전 정복](https://ai-generation-library.github.io/library/fastapi/)
 
-## 📖 What We're Building
+Python 비동기 프로그래밍부터 REST API 설계, 데이터베이스와 인증, 성능 측정, 운영, RAG와 Agent 서비스까지 다루는 **7부·30장**의 기술서입니다. 장별 예제와 Knowledge Hub 통합 실습을 함께 제공합니다.
 
-**AI가 책을 쓰고, 사람들이 함께 도서관을 완성합니다.**
+[책 읽기](https://ai-generation-library.github.io/library/fastapi/) · [Markdown 원고](https://github.com/AI-Generation-Library/books/tree/main/content/fastapi) · [실습 검증 범위](https://ai-generation-library.github.io/library/fastapi/appendices/verification)
 
-- 📚 **Open Library** — AI가 집필한 책을 누구나 자유롭게 열람할 수 있는 도서관
-- ✍️ **AI Authors** — 다양한 AI 모델을 활용한 책 집필 및 생성 과정
-- 🔎 **Book Discovery** — 주제와 장르에 따라 새로운 책을 발견할 수 있는 환경
-- 🤝 **Open Collaboration** — 누구나 콘텐츠와 코드 개선에 참여할 수 있는 오픈소스 생태계
+## 저장소 구성
 
-## 🌱 Contributing
+| 저장소 | 역할 | 현재 상태 |
+| --- | --- | --- |
+| [books](https://github.com/AI-Generation-Library/books) | 책 원고·목차·메타데이터·실습 코드 보관, 책 추가·수정 PR과 콘텐츠 검사 | FastAPI 원고 공개 |
+| [library](https://github.com/AI-Generation-Library/library) | 독자를 위한 검색·웹 뷰어·학습 진도·디자인·배포, 주제별 탐색 확장 | 웹 서재 배포 |
+| `book-generator` | AI 에이전트의 책 기획·목차 생성·장별 집필 파이프라인 | 설계 단계 · 저장소와 구현 준비 예정 |
+| [.github](https://github.com/AI-Generation-Library/.github) | Organization 소개와 공통 기여 안내·Issue 템플릿·커뮤니티 정책 관리 | 소개 게시 · 공통 정책과 템플릿 확장 예정 |
 
-AI Library는 누구나 참여할 수 있는 프로젝트를 지향합니다.
+현재 `books`의 원고를 `library`가 가져와 독자용 사이트를 만듭니다. 앞으로 `book-generator`는 콘텐츠 형식에 맞는 원고를 생성하고 `books`에 PR로 제안하는 역할을 맡습니다.
 
-**개발 경험이 없어도 참여할 수 있습니다.**
+[저장소 역할과 연동 설계](https://github.com/AI-Generation-Library/books/blob/main/ARCHITECTURE.md) · [책 콘텐츠 형식](https://github.com/AI-Generation-Library/books/blob/main/CONTENT-FORMAT.md)
 
-- **Suggest a Book** — 읽고 싶은 책의 주제나 아이디어를 제안해 주세요.
-- **Improve a Book** — 책의 오류를 수정하고 내용을 개선해 주세요.
-- **Contribute Code** — 도서관 서비스와 AI 책 생성 기능을 함께 개발해 주세요.
-- **Share Ideas** — 새로운 기능이나 개선 사항을 자유롭게 제안해 주세요.
+## 함께 만드는 방법
 
-GitHub Issues를 통해 의견을 남기거나 Pull Request로 직접 기여할 수 있습니다.
+- **책 읽기**: [온라인 서재](https://ai-generation-library.github.io/library/)에서 목차를 따라 읽고 실습해 보세요.
+- **책 제안·수정**: [books Issues](https://github.com/AI-Generation-Library/books/issues)에 주제를 제안하거나, 설명·예제·오탈자 수정 PR을 제출해 주세요. [콘텐츠 기여 안내](https://github.com/AI-Generation-Library/books/blob/main/CONTRIBUTING.md)를 참고할 수 있습니다.
+- **웹 서비스 개선**: 검색·읽기 화면·접근성·디자인은 [library Issues](https://github.com/AI-Generation-Library/library/issues)와 PR로 함께 개선합니다. [서비스 기여 안내](https://github.com/AI-Generation-Library/library/blob/main/CONTRIBUTING.md)에 개발 방법이 있습니다.
+- **생성기 아이디어**: 책 기획·집필 자동화 아이디어는 [books Issues](https://github.com/AI-Generation-Library/books/issues)에 제안해 주세요. 생성기 저장소가 준비되면 그곳에서 구현을 이어갑니다.
 
-## 🛠️ Our Projects
+## 책을 공개하는 원칙
 
-AI Library는 다음과 같은 프로젝트를 만들어갈 계획입니다.
+- **출처를 기록합니다.** AI 작성 여부, 생성 도구·모델·날짜·참고 자료를 기록합니다. 확인할 수 없는 정보는 추측하지 않습니다.
+- **검증한 범위를 구분합니다.** 실행한 실습과 확인한 환경을 남기고, 미검증 내용도 표시합니다. AI가 작성한 설명과 코드는 리뷰와 수정으로 정확도를 높입니다.
+- **원고와 개선 과정을 공개합니다.** Markdown 원고와 변경 이력을 관리하고, PR로 내용과 서비스를 함께 발전시킵니다.
 
-| Project | Description |
-|---|---|
-| 📚 Books | AI가 집필한 책과 도서 콘텐츠 |
-| 🌐 Library | 책을 검색하고 읽을 수 있는 웹 도서관 |
-| 🤖 Book Generator | AI 기반 책 집필 및 생성 시스템 |
+## 라이선스
 
-## 📜 Our Principles
+책 자료와 서비스 코드의 라이선스는 각 저장소에서 확인할 수 있습니다. 개별 의존성과 포함된 자료의 라이선스도 함께 확인해 주세요.
 
-- **Open Access** — 누구나 책을 쉽게 접할 수 있도록 합니다.
-- **Transparency** — 책 생성에 사용된 AI 모델과 제작 정보를 가능한 범위에서 공개합니다.
-- **Community Driven** — 커뮤니티의 제안과 기여를 통해 도서관을 발전시킵니다.
-- **Responsible AI** — 저작권을 존중하고, 정보의 정확성과 콘텐츠 품질을 개선합니다.
-
-## ⚖️ License
-
-AI Library는 오픈소스 프로젝트를 지향합니다.
-
-소스코드와 책 콘텐츠의 라이선스는 각각의 저장소에서 명시하며, 기여 및 재사용 조건을 투명하게 공개할 예정입니다.
-
----
-
-### 📚 Every AI has a story to tell.
-
-**Welcome to AI Library. Let's build an open library together.**
+[books LICENSE](https://github.com/AI-Generation-Library/books/blob/main/LICENSE) · [library LICENSE](https://github.com/AI-Generation-Library/library/blob/main/LICENSE) · [Quartz 라이선스](https://github.com/AI-Generation-Library/library/blob/main/LICENSE.txt)
